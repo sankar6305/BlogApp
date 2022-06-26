@@ -1,0 +1,52 @@
+<%- include('./partials/header') -%>
+<% if(locals.x){%>
+    <div class="Blog1">
+        <div id="Heading12">
+            <h1> Compose </h1>
+        </div>
+        <div class="publish_div">
+            <form action="/Edit/<%=x._id%>" method="post">
+                <h3>Title</h3>
+                <div class="title_post">
+                    <input class="title_post1" type="text" placeholder=" start here " name="inpt1" autocomplete="off" value="<%= x.title %>">
+                </div>
+                <h3>post</h3>
+                <div class="post">
+                    <textarea class="title_post2" name="post_content" cols="30" rows="10"><%= x.content %></textarea>
+                </div>
+                <div class="post_title">
+                    <button class="button_post" type="submit" name="publish_button" >Publish</button>
+                </div>
+                <br>
+            </form>
+        </div>
+        
+    </div>
+<%}else{ %>
+    
+    <div class="Blog1">
+        <div id="Heading12">
+            <h1> Compose </h1>
+        </div>
+        <div class="publish_div">
+            <form action="/publish" method="post">
+                <h3>Title</h3>
+                <div class="title_post">
+                    <input class="title_post1" type="text" placeholder=" start here " name="inpt1" autocomplete="off">
+                </div>
+                <h3>post</h3>
+                <div class="post">
+                    <textarea class="title_post2" name="post_content" cols="30" rows="10"></textarea>
+                </div>
+                <div class="post_title">
+                    <button class="button_post" type="submit" name="publish_button" >Publish</button>
+                </div>
+                <br>
+            </form>
+        </div>
+        
+    </div>
+
+<%} %>
+
+<%- include('./partials/footer') -%>

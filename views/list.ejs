@@ -1,0 +1,22 @@
+<%- include('./partials/header') -%>
+
+<!-- Blogs reports -->
+
+
+
+<% Home1.forEach(function(x){ %>
+    <div class="Blog">
+        <div id="Heading12">
+            <h1> <%= x.title %> </h1>
+        </div>
+        <% var hr = x.content.substring(0,150);  %>
+        <div class="content">
+            
+            <p> <%= hr %> ... <a href="/publish/<%=x._id%>">Readmore</a>
+            </p>
+        </div>
+    </div>
+<% }); %>
+
+
+<%- include('./partials/footer') -%>

@@ -1,0 +1,28 @@
+<%- include('./partials/header') -%>
+
+
+ <!-- edit
+
+    Edit button to add
+
+    Delete Button to delete
+
+ delete -->
+
+<div class="CRUD">
+    <button class="button_post" id="Update"><a class="link" href="/Edit/<%=x._id%> "> Edit</a>  </button>
+    <button class="button_post" id="Delete"><a class="link" href="/Delete/<%=x._id%> ">Delete</a></button>
+</div>
+
+
+
+<div class="Blog">
+    <div id="Heading12">
+        <h1> <%= x.title %> </h1>
+    </div>
+    <div class="content">
+        <p style="text-align: center;"> <pre><%= x.content.split("\n") %></pre> </p>
+    </div>
+</div>
+
+<%- include('./partials/footer') -%>
