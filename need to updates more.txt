@@ -1,0 +1,5 @@
+1>Add image insert 
+2> add Delete Format
+3 > Edit Format / Update format  
+4 > Upload it into heroku 
+5 > Apply more css to look better 
